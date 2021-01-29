@@ -262,5 +262,9 @@ body {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
    font-size: 1.125em;
+   padding: 8px 17px;
+    border-radius: 33px;
+    outline: none;
+    border: none;
 }
 
