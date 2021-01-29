@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+body {
+  background-color: #fffceb;
+  font-family: 'Nunito', sans-serif;
+}
+.logo-img {
+  width: 80%;
+  margin-top: 10px;
+}
+
+.menu-button {
+  background-color: #d1001e;
+  padding: 15px;
+  -webkit-border-radius: 50%;
+  -webkit-border-top-right-radius: 0;
+  -moz-border-radius: 50%;
+  -moz-border-radius-topright: 0;
+  border-radius: 50%;
+  border-top-right-radius: 0;
+  position: relative;
+  z-index: 5;
+}
+.menu-btn {
+  position: relative;
+  z-index: 5;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+.menu-btn .btn-line {
+  width: 18px;
+  height: 2.1px;
+  margin: 0px 0 3px 0;
+  background: #fff;
+  transition: all 0.5s ease-out;
+}
+
+.menu-btn.close {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+.menu-btn.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 5px);
+  opacity: 1;
+}
+
+.menu-btn.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(3px, -2px);
+  opacity: 1;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 10.5%;
+  opacity: 1;
+  visibility: hidden;
+  background-image: url("../images/menu-bg.svg");
+  /* background-color: rebeccapurple; */
+  /* height: 400px; */
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 4;
+  width: 0%;
+  height: 20px;
+  overflow: hidden;
+  transition: 0.5s ease;
+  transition: 0.5s ease;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu.show {
+  visibility: visible;
+  height: 400px;
+  background-position: right;
+  right: 8%;
+  width: 30%;
+  transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.menu-branding {
+  display: flex;
+  justify-content: flex-end;
+  transition: 0.8s ease-out;
+}
+
+.portrait {
+  width: 70%;
+}
+.portrait img {
+  width: 100% !important;
+  transition-delay: 0.5s;
+}
+.menu-nav {
+  position: relative;
+  overflow: hidden;
+  transition: 1s ease;
+  transition: 1s ease;
+  height: 0;
+  width: 30%;
+  margin-top: 20%;
+  margin-right: 15px;
+}
+.nav-item {
+  text-align: center;
+}
+.nav-item a {
+  color: #fffceb;
+}
+.nav-item a:hover {
+  color: #ff9eab;
+}
+.menu-nav.show {
+  position: relative;
+  overflow: hidden;
+  transition: 1.5s ease;
+  transition: 1.5s ease;
+  height: 200px;
+  width: 30%;
+}
+.nav-item:nth-child(1) {
+  transition-delay: 0.2s;
+  transition: ease 1s;
+}
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.2s;
+  transition: ease 1s;
+}
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.4s;
+  transition: ease 1s;
+}
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.6s;
+  transition: ease 1s;
+}
+
+.hero-banner {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+.hero-img-bg {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  z-index: 1;
+}
+.img-burger {
+  z-index: 3;
+  position: relative;
+}
+.hero-banner h2{
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 48px;
+  letter-spacing: 0;
+  color: #790011;
+}
+.hero-banner h2 span{
+  color: #d1001e;
+}
+.hero-banner p{
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 1.875rem;
+  letter-spacing: 0;
+  color: #A0414F;
+  margin-top: 50px;
+}
+.hero-banner .up{
+  font-family: 'Shadows Into Light', cursive;
+  position: absolute;
+  margin-top: -48px;
+  margin-left: -48px;
+  font-weight: 400;
+  color: #201013;
+  transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+}
+.hero-banner .down{
+  font-family: 'Shadows Into Light', cursive;
+  position: absolute;
+  margin-top: 35px;
+  margin-left: -25px;
+  font-weight: 400;
+  color: #201013;
+}
+
+#burger{
+  position: fixed; 
+  right: 0px;
+  z-index: 6;
+}
+.card-style h2{
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 2.25em;
+  color: #790011;
+  font-weight: 400;
+}
+.card-style p{
+  font-family: Nunito, sans-serif;
+  font-size: 0.75em;
+  color: #201013;
+  font-weight: 400;
+}
+
+.section-extract .col-md-4{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.card-style{
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.position{
+  display: hidden;
+}
+.section-extract{
+  padding-top: 15%;
+  padding-bottom: 10%;
+}
+.custom{
+   padding-top: 100%;
+   
+}
+.custom .container{
+  padding-top: 40vh;
+  padding-bottom: 40vh;
+}
+.custom h2{
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 1.875em;
+  color: #790011;
+  padding-bottom: 20px;
+}
+.btn-burger{
+  background-color: #D1001E;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+   font-size: 1.125em;
+}
+

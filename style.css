@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: 'Permanent Marker', cursive;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 1500px;
+}
+.image-container {
+    width: 100%;
+    height: 0;
+    padding-top: 45.347%;
+    position: sticky;
+    top: 0;
+    background-size: cover;
+    background-image: url('https://drive.google.com/uc?id=1vtaubItASKilyvb5sgQO7D7gjAQ7xo0i');
+  }
+
+  .text-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    color: white;}
+    .subtitle { 
+      opacity: 0;
+      font-size: 30px; 
+    }
+    .title { 
+      opacity: 0;
+      font-size: 80px; margin: -20px 0;
+    }
+  
