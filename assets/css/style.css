@@ -7,6 +7,7 @@
 body {
   background-color: #fffceb;
   font-family: 'Nunito', sans-serif;
+  overflow-x: hidden;
 }
 .logo-img {
   width: 80%;
@@ -231,14 +232,14 @@ body {
   flex-direction: column;
 }
 .card-style{
-  padding-top: 60px;
+  margin-top: 60px;
   padding-bottom: 60px;
 }
 .position{
   display: hidden;
 }
 .section-extract{
-  padding-top: 15%;
+  margin-top: 15%;
   padding-bottom: 10%;
 }
 .custom{
@@ -246,7 +247,7 @@ body {
    
 }
 .custom .container{
-  padding-top: 40vh;
+  margin-top: 20vh;
   padding-bottom: 40vh;
 }
 .custom h2{
@@ -267,4 +268,68 @@ body {
     outline: none;
     border: none;
 }
+
+.hero-banner {
+  
+  height: 150vh;
+}
+
+.section-extract {
+  /* background: green; */
+  height: 150vh !important;
+}
+
+.custom {
+  height: 150vh;
+}
+
+/* #card01{
+  position: relative;
+    left: 50%;
+    transform: translateX(-200%);
+    transition: 1.5s ease-in-out;
+}
+#card02{
+  position: relative;
+  left: 50%;
+  transform: translateX(-200%);
+  transition: 2.0s ease-in-out;
+}
+#card01.active, #card02.active{
+ display: inline-block;
+   transform: translateX(-50%);
+}
+#card03{
+  position: relative;
+    right: 50%;
+    transform: translateX(200%);
+    transition: 1.5s ease-in-out;
+}
+#card04{
+  position: relative;
+    right: 50%;
+    transform: translateX(200%);
+    transition: 2.0s ease-in-out;
+}
+#card03.active, #card04.active{
+ display: inline-block;
+   transform: translateX(50%);
+} */
+
+#bg1{
+  position: absolute; 
+  bottom: 0; 
+  right: 0; 
+  z-index: 1; 
+}
+#bg1{
+  position: absolute; 
+  bottom: 10px; 
+  right: 0; 
+  z-index: 2;
+}
+.overflow{
+  overflow: hidden;
+}
+
 
