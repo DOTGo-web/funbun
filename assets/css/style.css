@@ -218,6 +218,7 @@ body {
   font-size: 2.25em;
   color: #790011;
   font-weight: 400;
+  position: relative;
 }
 .card-style p{
   font-family: Nunito, sans-serif;
@@ -241,21 +242,23 @@ body {
 .section-extract{
   margin-top: 15%;
   padding-bottom: 10%;
+  padding-top: 5%;
 }
-.custom{
-   padding-top: 100%;
-   
-}
-.custom .container{
-  margin-top: 20vh;
-  padding-bottom: 40vh;
-}
+
 .custom h2{
   font-family: 'Nunito', sans-serif;
   font-weight: 600;
   font-size: 1.875em;
   color: #790011;
   padding-bottom: 20px;
+}
+
+.basicBtn{
+  font-family: 'Nunito', sans-serif;
+  border-radius: 33px;
+    outline: none;
+    border: none;
+    cursor: pointer;   
 }
 .btn-burger{
   background-color: #D1001E;
@@ -267,6 +270,29 @@ body {
     border-radius: 33px;
     outline: none;
     border: none;
+}
+.btn-light{
+  background-color: #ff9eab;
+  color: #fff;
+  font-weight: 400;
+   font-size: 13px;
+   padding: 6px 0px;
+    border-radius: 33px;   
+    width: 45%;
+}
+.btn-light:hover{
+   background-color: #ff9eab;
+}
+.btn-dark{
+  background-color: #D1001E;
+  color: #fff;
+  font-weight: 400;
+   font-size: 13px;
+   padding: 6px 0px;    
+    width: 45%;
+}
+.btn-dark:hover{
+  background-color: #D1001E;
 }
 
 .hero-banner {
@@ -281,40 +307,63 @@ body {
 
 .custom {
   height: 150vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.custom .container{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.custom .row{
+  width: 100%;
 }
 
-/* #card01{
-  position: relative;
-    left: 50%;
-    transform: translateX(-200%);
-    transition: 1.5s ease-in-out;
+.line {
+  height: 1px;
+  background-color: rgba(121,0,17,0.45);
 }
-#card02{
-  position: relative;
-  left: 50%;
-  transform: translateX(-200%);
-  transition: 2.0s ease-in-out;
+#line1{
+      transform: rotate(15deg);
+    margin-left: 80%;
+    width: 30%;
 }
-#card01.active, #card02.active{
- display: inline-block;
-   transform: translateX(-50%);
+#line2{
+      width: 55%;
+    position: absolute;
+    transform: rotate(15deg);
+    margin-left: 54%;
+    margin-top: 12%;
 }
-#card03{
-  position: relative;
-    right: 50%;
-    transform: translateX(200%);
-    transition: 1.5s ease-in-out;
+#line3{
+  width: 40%;
+    transform: rotate(-45deg);
+    margin-left: -25%;
+    margin-top: 12%;
+    position: absolute;
 }
-#card04{
-  position: relative;
-    right: 50%;
-    transform: translateX(200%);
-    transition: 2.0s ease-in-out;
+#line4{
+      width: 40%;
+    transform: rotate(-53deg);
+    margin-left: -35%;
+    margin-top: 20%;
+    position: absolute;
 }
-#card03.active, #card04.active{
- display: inline-block;
-   transform: translateX(50%);
-} */
+
+
+.left-rotate {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.right-rotate {
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
 
 #bg1{
   position: absolute; 
@@ -331,5 +380,305 @@ body {
 .overflow{
   overflow: hidden;
 }
+.fourth-section{
+  background-color: #fff;
+  height: 150vh;
+}
+.fourth-section .container{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section .row{
+  width: 100%;
+}
+.fourth-section .burger-making{
+  position: relative;
+  margin-top: 15%;
+}
+.fourth-section img{
+  position: relative;
+  margin-top: -7%;
+}
+.fourth-section img:nth-of-type(1){
+    z-index: 9;
+}
+.fourth-section img:nth-of-type(2){
+    z-index: 9;
+    margin-top: -15%;
+    margin-bottom: -3%;
+}
+.fourth-section img:nth-of-type(3){
+    z-index: 8;
+}
+.fourth-section img:nth-of-type(4){
+    z-index: 7;
+}
+.fourth-section img:nth-of-type(5){
+    z-index: 6;
+}
+.b-card{
+  background-color: #ffe1e5;
+  padding: 15px 30px;
+  -webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+.card-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.b-card span{
+  color: #d1001e;
+  font-size: 17px;
+    font-weight: 500;
+  font-family: 'Nunito', sans-serif;
+}
+#totalAmt{
+ width: 90%;
+    text-align: center;
+    font-size: 13px;
+    padding: 2px 10px;
+    margin-left: 10%;
+}
+.card-list{
+  height: 280px;
+  width: 100%;
+  background-color: #fff;
+    width: 100%;
+    border: 1px solid #d1001e;
+    overflow: hidden;
+}
+.card-list ul{
+  width: 100%;
+    height: 100%;
+    overflow: scroll;
+    padding-right: 0px;
+}
+.card-list ul li{
+  padding: 10px;
+    border-bottom: 1px solid #dadada;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-list ul li div{
+ font-size: 15px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 500;
+
+}
+.card-list ul::-webkit-scrollbar {
+display: none;
+width: 0;
+}
+.fifth-section{
+  background-color: green;
+  height: 100vh;
+   font-family: 'Nunito', sans-serif;
+   font-weight: 500;
+}
+
+
+
+
+.btn-round {
+  width:30px;
+	height:30px;
+	border-radius:50%;
+  background-color:#ff9eab;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #b2646c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close{
+  position: relative;
+  display: inline-block;
+      width: 15px;
+    height: 15px;
+  /* top:12.5px;
+  left:12.5px; */
+  overflow: hidden;
+  opacity: 1 !important;  
+}
+.close::before,.close::after{
+  content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 48%;
+    left: 0;
+    margin-top: -1px;
+    background: #fff;
+    
+}
+
+.closeButton .close::before,.closeButton .close::after{
+  background: #A0414F;
+}
+.plusButton .close::before,.plusButton .close::after{
+  background: #fff;
+}
+.close::before{
+  transform:rotate(0deg);
+}
+.close::after{
+  transform:rotate(90deg);
+}
+
+.animated {
+  -webkit-animation-duration: .35s;
+  animation-duration: .35s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes plusButton {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    transform: rotate3d(0, 0, 1, -45deg);
+    background-color:#ff9eab;
+  }
+
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: none;
+    transform: none;
+    background-color:#ff9eab;
+  }
+}
+
+@keyframes plusButton {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+    background-color:#ff9eab;
+  }
+
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: none;
+    transform: none;
+    background-color:#ff9eab;
+  }
+}
+
+.plusButton {
+  -webkit-animation-name: plusButton;
+  animation-name: plusButton;
+}
+
+
+@-webkit-keyframes closeButton {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: none;
+    transform: none;
+    background-color:#fffceb;
+  }
+
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+    background-color:#fffceb;
+  }
+}
+
+@keyframes closeButton {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: none;
+    transform: none;
+    background-color:#fffceb;
+  }
+
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+    background-color:#fffceb;
+  }
+}
+
+.closeButton {
+  -webkit-animation-name: closeButton;
+  animation-name: closeButton;
+}
+
+@-webkit-keyframes circleShape {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    background-color:red;
+  }
+
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+    background-color:red;
+    border-radius: 30px;
+  }
+}
+
+@keyframes circleShape {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    background-color:red;
+  }
+
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    transform: rotate3d(0, 0, 1, 45deg);
+    background-color:red;
+    border-radius: 30px;
+  }
+}
+
+.circleShape {
+  -webkit-animation-name: circleShape;
+  animation-name: circleShape;
+}
+
+.add-button{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 15px;
+}
+.third-section{
+  height: 150vh;
+  background-color: greenyellow;
+}
+.third-section .container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
 
 

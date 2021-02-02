@@ -5,14 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="assets/css/style.css">
-   
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        crossorigin="anonymous">
+    crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-   
-
-     <link rel="stylesheet" href="assets/css/style.scss">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />  
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/main.js" crossorigin="anonymous"></script>
     <title>Fun Burger</title>
 </head>
 
@@ -68,10 +69,8 @@
             </nav>
         </div>
     </header>
-
-
-
-    <section class="hero-banner"  style="height: 100vh; system: position: absolute; :right:0">
+    
+     <section class="hero-banner"  style="height: 100vh;">
         <div class="container">
             <div class="row d-flex-inline align-items-center">
                 <div class="col-md-5 offset-md-1">
@@ -84,19 +83,21 @@
                     <p>We all need to make time for <br>a burger, once in a while.</p>
                 </div>
                 <div class="col-md-5 col-sm-6" id="burger">
-                    <img src="assets/images/burger-top.png" class="img-burger" width="80%">   
-                    <img src="assets/images/burger-spinach.png" class="img-burger" width="80%">
+                    <img src="assets/images/burger-top.png" class="img-burger" width="80%">                    
+                    <img src="assets/images/burger-spinach.png" class="img-burger" width="80%">                   
                     <img src="assets/images/burger-tomato.png" class="img-burger" width="80%">
                     <img src="assets/images/burger-cutlet.png" class="img-burger" width="80%">
-                    <img src="assets/images/burger-base.png" class="img-burger" width="80%">
-                </div>               
+                    <img src="assets/images/burger-base.png" class="img-burger" width="80%">                   
+                </div>  
+                
             </div>
             <img src="assets/images/background.png" class="hero-img-bg" width="50%">
         </div>
-    </section>
+    </section>    
     <section class="section-extract" id="extract">
         <div class="container">
-            <div class="row d-flex justify-content-between">
+            <div class="row d-flex justify-content-between" style="position: relative;">
+               
                 <div class="col-md-4">
                     <div class="card-style" id="card01">
                         <h2 data-aos="fade-right" data-aos-offset="50" data-aos-delay="100">Verdant Spinach</h2>
@@ -104,16 +105,23 @@
                             adipiscing elit.
                             Integer non quam nec eros maximus maximus. Ut vel dapibus ipsum. Vestibulum volutpat est id
                             tellus rhoncus, et
-                            condimentum ex faucibus.</p>                        
+                        condimentum ex faucibus.</p>     
+                        <div class="line" data-aos="fade-left" data-aos-anchor-placement="center-center" id="line1"></div> 
+                       
+
                     </div>
                     <div class="card-style" id="card02">
+                        <div class="line" id="line2" data-aos="fade-left" data-aos-anchor-placement="bottom-bottom"></div>
+                       
                         <h2 data-aos="fade-right" data-aos-offset="100" data-aos-delay="100">Crunchy Cutlet</h2>
                         <p data-aos="fade-up" data-aos-offset="150" data-aos-delay="100">Donec ex arcu, bibendum nec cursus id, accumsan et dolor. Lorem ipsum dolor sit amet, consectetur
                             adipiscing
                             elit.
                             Integer non quam nec eros maximus maximus. Ut vel dapibus ipsum. Vestibulum volutpat est id
                             tellus rhoncus, et
-                            condimentum ex faucibus.</p>
+                        condimentum ex faucibus.</p>
+                        
+                        
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -124,18 +132,21 @@
                             elit.
                             Integer non quam nec eros maximus maximus. Ut vel dapibus ipsum. Vestibulum volutpat est id
                             tellus rhoncus, et
-                            condimentum ex faucibus.</p>
+                        condimentum ex faucibus.</p>
+                        <div class="line" id="line3" data-aos="fade-up" data-aos-anchor-placement="center-center"></div>
                     </div>
                     <div class="card-style" id="card04">
+                        <div class="line" id="line4" data-aos="fade-right" data-aos-anchor-placement="bottom-bottom"></div>
                         <h2 data-aos="fade-left" data-aos-offset="100" data-aos-delay="100">The Burger Bun</h2>
                         <p data-aos="fade-up" data-aos-offset="150" data-aos-delay="100">Donec ex arcu, bibendum nec cursus id, accumsan et dolor. Lorem ipsum dolor sit amet, consectetur
                             adipiscing
                             elit.
                             Integer non quam nec eros maximus maximus. Ut vel dapibus ipsum. Vestibulum volutpat est id
                             tellus rhoncus, et
-                            condimentum ex faucibus.</p>
+                        condimentum ex faucibus.</p>
+                        
                     </div>
-                </div>
+                </div>                
             </div>
         </div>
     </section>
@@ -144,8 +155,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 offset-md-6 text-center">
-                    <h2 data-aos="fade-down" data-aos-offset="50" data-aos-delay="100">Customize Your Burger</h2>
-                    <button type="button" class="btn-burger" data-aos="fade-up" data-aos-offset="150" data-aos-delay="800">Make Your Own</button>
+                    <h2 data-aos="fade-down" data-aos-offset="50" data-aos-delay="100" >Customize Your Burger</h2>
+                    <button class="btn-burger" data-aos="fade-up" data-aos-offset="100" data-aos-delay="100" data-aos-anchor-placement="bottom-bottom">Make Your Own</button>
                 </div>
                 <div class="col-md-12" style="position: fixed; bottom: 0%; right: 10px;">
                     <img src="assets/images/background.png" width="70%" class="bg2" id="bg1">
@@ -153,22 +164,170 @@
                 </div>
             </div>
         </div>
-    </section>    
+    </section>   
+
+
+    <section class="fourth-section" style="position: relative; z-index: 8;">
+        <div class="container">
+            <div class="row col-md-10">
+                <div class="col-md-7">
+                    <h3>Make Your Own Burger</h3>
+                    <div class="burger-making">
+                        <img src="assets/images/burger-top.png" class="img-burger" width="80%">
+                        <img src="assets/images/burger-spinach.png" class="img-burger" width="80%">
+                        <img src="assets/images/burger-tomato.png" class="img-burger" width="80%">
+                        <img src="assets/images/burger-cutlet.png" class="img-burger" width="80%">
+                        <img src="assets/images/burger-base.png" class="img-burger" width="80%">
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="b-card">
+                        <div class="card-head">
+                            <span style="width: 60%;">Select Toppings</span>
+                            <span style="width: 40%;"><input type="text" id="totalAmt" name="amount" value=" Rs 600"></span>
+                        </div>
+
+                        <div class="card-list">
+                            <ul style="list-style-type:none;">
+                                <li>
+                                    <div>Vegetarian Cutlet</div>
+                                    <div class="btn-round">
+                                        <span class="close"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>Chicken Cutlet</div>
+                                    <div class="btn-round">
+                                        <span class="close"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>Chedder Cheese</div>
+                                    <div class="btn-round">
+                                        <span class="close"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>Cucumber</div>
+                                    <div class="btn-round">
+                                        <span class="close"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>Lettuce</div>
+                                    <div class="btn-round">
+                                        <span class="close"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>Tomato</div>
+                                    <div class="btn-round">
+                                        <span class="close"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>Vegetarian Cutlet</div>
+                                    <div class="btn-round">
+                                        <span class="close"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>Chicken Cutlet</div>
+                                    <div class="btn-round">
+                                        <span class="close"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>Chedder Cheese</div>
+                                    <div class="btn-round">
+                                        <span class="close"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>Cucumber</div>
+                                    <div class="btn-round">
+                                        <span class="close"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>Lettuce</div>
+                                    <div class="btn-round">
+                                        <span class="close"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>Tomato</div>
+                                    <div class="btn-round">
+                                        <span class="close"></span>
+                                    </div>
+                                </li>                               
+                            </ul>
+                        </div>
+
+                        <div class="add-button">
+                            <button class="basicBtn btn-light">CLEAR ALL</button>
+                            <button class="basicBtn btn-dark">ADD TO CART</button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </section>
+
+    <!-- <section class="fifth-section" style="position: relative; z-index: 8;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    Hello
+                </div>
+                <div class="col-md-6">
+                    Hello
+                </div>
+            </div>    
+        </div>
+    </section> -->
+
+
+
 
     <script src="assets/js/script.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script src="assets/js/main.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
-                duration: 800,
-                mirror: true,
-            });
+            duration: 800,
+            mirror: true,
+        });
 
-             $(document).ready(function () {
-                    $(this).scrollTop(0);
-                     });
+        $(document).ready(function () {
+            $(this).scrollTop(0);
+        });
+    </script>
+
+    <script>
+        		$(function () {
+                        //do something
+
+                        $(".btn-round").click({ animateIn: "closeButton", animateOut: "plusButton" }, animate_function);
+
+                        function animate_function(event) {
+                            if ($(this).hasClass(event.data.animateIn)) {
+                                $(this).removeClass(event.data.animateIn).addClass(event.data.animateOut);
+                            }
+                            else if ($(this).hasClass(event.data.animateOut)) {
+                                $(this).removeClass(event.data.animateOut).addClass(event.data.animateIn);
+                            }
+                            else {
+                                $(this).addClass('animated ' + event.data.animateIn);
+                            }
+                        }
+
+                        //end do something     
+                    });
     </script>
 </body>
 
