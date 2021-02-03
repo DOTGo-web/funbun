@@ -12,7 +12,11 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />  
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.css">
+    
+    <!-- Default Theme -->
+    <link rel="stylesheet" href="assets/css/owl.theme.css">
     <script src="assets/js/main.js" crossorigin="anonymous"></script>
     <title>Fun Burger</title>
 </head>
@@ -151,7 +155,9 @@
         </div>
     </section>
 
-    <section class="custom" style="position: relative;">
+    <div class="box" style="height: 90vh;"></div>
+
+    <div class="custom" style="position: relative;">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 offset-md-6 text-center">
@@ -164,14 +170,14 @@
                 </div>
             </div>
         </div>
-    </section>   
+    </div>     
 
 
-    <section class="fourth-section" style="position: relative; z-index: 8;">
+    <div class="fourth-section" style="position: relative; z-index: 8;">
         <div class="container">
             <div class="row col-md-10">
-                <div class="col-md-7">
-                    <h3>Make Your Own Burger</h3>
+                <div class="col-md-6">
+                    <h3 data-aos="fade-right">Make Your Own Burger</h3>
                     <div class="burger-making">
                         <img src="assets/images/burger-top.png" class="img-burger" width="80%">
                         <img src="assets/images/burger-spinach.png" class="img-burger" width="80%">
@@ -180,8 +186,8 @@
                         <img src="assets/images/burger-base.png" class="img-burger" width="80%">
                     </div>
                 </div>
-                <div class="col-md-5">
-                    <div class="b-card">
+                <div class="col-md-6">
+                    <div class="b-card" data-aos="zoom-in">
                         <div class="card-head">
                             <span style="width: 60%;">Select Toppings</span>
                             <span style="width: 40%;"><input type="text" id="totalAmt" name="amount" value=" Rs 600"></span>
@@ -265,8 +271,8 @@
                         </div>
 
                         <div class="add-button">
-                            <button class="basicBtn btn-light">CLEAR ALL</button>
-                            <button class="basicBtn btn-dark">ADD TO CART</button>
+                            <button class="basicBtn btn-trans">CLEAR ALL</button>
+                            <button class="basicBtn btn-red">ADD TO CART</button>
                         </div>
 
 
@@ -274,29 +280,288 @@
                 </div>
             </div>            
         </div>
-    </section>
+    </div>
 
-    <!-- <section class="fifth-section" style="position: relative; z-index: 8;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    Hello
+    <div class="fifth-section" style="position: relative; z-index: 8;">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="col-md-10">
+                    <h2 class="heading" data-aos="fade-right">Select your menu</h2>
                 </div>
-                <div class="col-md-6">
-                    Hello
+            </div>
+        <div id="owl-demo" class="owl-carousel">        
+            <div class="item">
+               <div class="burger-item">
+                   <div class="burImg">
+                        <img src="assets/images/hamburger_burger.png" width="100%">
+                    </div>
+                   <div class="cardCont">
+                       <div class="btn-round animated plusButton" data-toggle="modal" data-target="#exampleModal">
+                            <span class="close"></span>
+                        </div>
+                       <h3>Hawaii Burger</h3>
+                       <p>Topped with pineapple and often Japanese teriyaki sauce.</p>                    
+                   </div>
+               </div>
+            </div>
+            <div class="item">
+                <div class="burger-item">
+                    <div class="burImg">
+                        <img src="assets/images/hamburger_burger.png" width="100%">
+                    </div>
+                    <div class="cardCont">
+                        <div class="btn-round animated plusButton">
+                            <span class="close"></span>
+                        </div>
+                        <h3>Hawaii Burger</h3>
+                        <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
+                    </div>
                 </div>
-            </div>    
+            </div>
+            <div class="item">
+                <div class="burger-item">
+                    <div class="burImg">
+                        <img src="assets/images/hamburger_burger.png" width="100%">
+                    </div>
+                    <div class="cardCont">
+
+                        <div id="parent1"></div>
+                        <div id="div-to-toggle" class="custom_modal" style="display: none;">                        
+                            <h1>This is heading</h1>
+                            <p>This a Paragraph in the div for demonstration.</p>
+                        </div>
+                        <div class="btn-round animated plusButton" id="click-to-show">
+                            <span class="close"></span>
+                        </div>
+                        <h3>Hariz Hameed</h3>
+                        <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
+
+                        <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="burger-item">
+                    <div class="burImg">
+                        <img src="assets/images/hamburger_burger.png" width="100%">
+                    </div>
+                    <div class="cardCont">
+                        <div class="btn-round animated plusButton">
+                            <span class="close"></span>
+                        </div>
+                        <h3>Hawaii Burger</h3>
+                        <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="burger-item">
+                    <div class="burImg">
+                        <img src="assets/images/hamburger_burger.png" width="100%">
+                    </div>
+                    <div class="cardCont">
+                        <div class="btn-round animated plusButton">
+                            <span class="close"></span>
+                        </div>
+                        <h3>Hawaii Burger</h3>
+                        <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="burger-item">
+                    <div class="burImg">
+                        <img src="assets/images/hamburger_burger.png" width="100%">
+                    </div>
+                    <div class="cardCont">
+                        <div class="btn-round animated plusButton">
+                            <span class="close"></span>
+                        </div>
+                        <h3>Hawaii Burger</h3>
+                        <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="burger-item">
+                    <div class="burImg">
+                        <img src="assets/images/hamburger_burger.png" width="100%">
+                    </div>
+                    <div class="cardCont">
+                        <div class="btn-round animated plusButton">
+                            <span class="close"></span>
+                        </div>
+                        <h3>Hawaii Burger</h3>
+                        <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="burger-item">
+                    <div class="burImg">
+                        <img src="assets/images/hamburger_burger.png" width="100%">
+                    </div>
+                    <div class="cardCont">
+                        <div class="btn-round animated plusButton">
+                            <span class="close"></span>
+                        </div>
+                        <h3>Hawaii Burger</h3>
+                        <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="burger-item">
+                    <div class="burImg">
+                        <img src="assets/images/hamburger_burger.png" width="100%">
+                    </div>
+                    <div class="cardCont">
+                        <div class="btn-round animated plusButton">
+                            <span class="close"></span>
+                        </div>
+                        <h3>Hawaii Burger</h3>
+                        <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="burger-item">
+                    <div class="burImg">
+                        <img src="assets/images/hamburger_burger.png" width="100%">
+                    </div>
+                    <div class="cardCont">
+                        <div class="btn-round animated plusButton">
+                            <span class="close"></span>
+                        </div>
+                        <h3>Hawaii Burger</h3>
+                        <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="burger-item">
+                    <div class="burImg">
+                        <img src="assets/images/hamburger_burger.png" width="100%">
+                    </div>
+                    <div class="cardCont">
+                        <div class="btn-round animated plusButton">
+                            <span class="close"></span>
+                        </div>
+                        <h3>Hawaii Burger</h3>
+                        <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="burger-item">
+                    <div class="burImg">
+                        <img src="assets/images/hamburger_burger.png" width="100%">
+                    </div>
+                    <div class="cardCont">
+                        <div class="btn-round animated plusButton">
+                            <span class="close"></span>
+                        </div>
+                        <h3>Hawaii Burger</h3>
+                        <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
+                    </div>
+                </div>
+            </div>        
         </div>
-    </section> -->
+        </div>
+    </div>
+
+    <div class="about-section" style="position: relative; z-index: 8;">
+        <div class="container">
+            <div class="col-md-10">
+            <h2 data-aos="fade-right">Our Story</h2>
+            <p data-aos="fade-left">The hamburger, in some form or another, has appeared throughout history since the early 4th century. It survived through
+            war, economic crises, and over a dozen centuries of time. Traveling from Europe across the Atlantic, the hamburger rose
+            to fame in the US, emerging as an icon in the culinary world. While its story is long and tiresome – from Mongol
+            horsemen to American county fairs – here’s how America’s favorite sandwich became what we know and love today.</p>
+
+            <p data-aos="fade-left">Before the hamburger came to America, it was a popular culinary tradition in Europe. An ancient collection of recipes
+            accredit the first minced meat preparation to the 4th century; other historians believe it was the Mongols that spread
+            the tradition in the 13th century when warriors would stash raw meat under their saddles to soften it and cook it. It
+            spread throughout the empire and across Europe, with Moscow adopting a raw version – known today as steak tartare – by
+            the end of the century.</p>
+            </div>
+        </div>
+    </div>
 
 
+    <footer>
+        <div class="container">
+            <div class="col-md-10">
+                <h2 class="f-head" data-aos="fade-right">Locations</h2>
+                <div class="row f-location">                    
+                    <div class="col-md-3" data-aos="fade-down" data-aos-delay="50">1274, TM Road<br>
+                    Vazhuthacaud<br>
+                    Trivandrum.</div>
+                    <div class="col-md-3" data-aos="fade-down" data-aos-delay="100">7/32, Central<br>
+                    Mynad<br>
+                    Kollam.</div>
+                    <div class="col-md-3" data-aos="fade-down" data-aos-delay="150">56-B, FR Plaza<br>
+                    Kakkanad<br>
+                    Kochi.</div>
+                    <div class="col-md-3" data-aos="fade-down" data-aos-delay="200">Y 8/4, Triveni<br>
+                    Kunnamkulam<br>
+                    Trissur.</div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+        <div class="container">
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-6">
+                       <a href="#">Privacy Policy</a><br>
+                       <a href="#">© 2021 FunBun</a>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="social-media">
+                            <ul>
+                                <li><a href="#"><img src="assets/images/icon-twitter.png"></a></li>
+                                <li><a href="#"><img src="assets/images/icon-insta.png"></a></li>
+                                <li><a href="#"><img src="assets/images/icon-pint.png"></a></li>
+                                <li><a href="#"><img src="assets/images/icon-fb.png"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-
+        </div>
+    </footer>
     <script src="assets/js/script.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.1.0.js" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script src="assets/js/main.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+    <script src="assets/js/owl.carousel.js"></script>
+
+    <script src="assets/js/custom.js"></script>
     <script>
         AOS.init({
             duration: 800,
@@ -309,26 +574,39 @@
     </script>
 
     <script>
-        		$(function () {
-                        //do something
 
-                        $(".btn-round").click({ animateIn: "closeButton", animateOut: "plusButton" }, animate_function);
-
-                        function animate_function(event) {
-                            if ($(this).hasClass(event.data.animateIn)) {
-                                $(this).removeClass(event.data.animateIn).addClass(event.data.animateOut);
-                            }
-                            else if ($(this).hasClass(event.data.animateOut)) {
-                                $(this).removeClass(event.data.animateOut).addClass(event.data.animateIn);
-                            }
-                            else {
-                                $(this).addClass('animated ' + event.data.animateIn);
-                            }
-                        }
-
-                        //end do something     
-                    });
+        $(document).ready(function () {
+            $('#1').click(function () {
+                if ($("#parent1").is(":hidden")) {
+                    $("#parent1").slideDown("slow");
+                } else {
+                    $("#parent1").slideUp("slow");
+                }
+            });
+        });
+        
     </script>
+
+    
+
+    <script>
+        $(document).ready(function () {
+            $("#owl-demo").owlCarousel({
+                navigation: true,
+                autoPlay: true,
+                responsive: true,
+                items: 5,
+                slideSpeed: 200,
+                pagination:false,
+                goToFirst :false,
+                navigationText: [
+                    "<img src='assets/images/arrow_prev.png' width='100%'>",
+                    "<img src='assets/images/arrow_next.png' width='100%'>"
+                ],
+            })
+        });
+    </script>
+
 </body>
 
 </html>

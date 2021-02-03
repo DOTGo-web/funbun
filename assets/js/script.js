@@ -34,3 +34,46 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+
+// Owl Carousel
+$(document).ready(function () {
+    $("#owl-demo").owlCarousel({
+        navigation: true,
+        autoPlay: true,
+        responsive: true,
+        items: 5,
+        slideSpeed: 200,
+        pagination:false,
+        goToFirst :false,
+        navigationText: [
+            "<img src='assets/images/arrow_prev.png' width='100%'>",
+            "<img src='assets/images/arrow_next.png' width='100%'>"
+        ],
+    })
+});
+
+
+
+ $(function () {
+   $(".btn-round").click(
+     { animateIn: "closeButton", animateOut: "plusButton" },
+     animate_function
+   );
+
+   function animate_function(event) {
+     if ($(this).hasClass(event.data.animateIn)) {
+       $(this)
+         .removeClass(event.data.animateIn)
+         .addClass(event.data.animateOut);
+     } else if ($(this).hasClass(event.data.animateOut)) {
+       $(this)
+         .removeClass(event.data.animateOut)
+         .addClass(event.data.animateIn);
+     } else {
+       $(this).addClass("animated " + event.data.animateIn);
+     }
+   }
+
+   //end do something
+ });
