@@ -1270,6 +1270,7 @@ border-radius: 15px;
    #burger{
      /* padding-top: 10%; */
      text-align: center;
+     background-color: rgb(255, 251, 231);
    }
    #customize.show{
      opacity: 1 ;

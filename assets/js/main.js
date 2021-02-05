@@ -34,9 +34,10 @@ $(document).ready(function () {
        }
        if (height > 95 && height <= 430) {
          b.css({ background: "#fffbe7" });
-       } else {
-         b.css({ background: "transparent" });
-       }
+       } 
+      //  else {
+      //    b.css({ background: "transparent" });
+      //  }
        
        if (height > 360 && height <= 380) {
          $("#customize").addClass('show');
