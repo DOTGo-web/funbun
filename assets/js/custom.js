@@ -8,11 +8,12 @@ $(function () {
     if ($(this).hasClass(event.data.animateIn)) {
       $(this).removeClass(event.data.animateIn).addClass(event.data.animateOut);
       //  $(this).next(".selected").hide();
-       $(this).parent().parent().find("#div-to-toggle").hide();
+       $(this).parent().parent().find("#div-to-toggle").removeClass('show');
        event.stopPropagation();  
     } else if ($(this).hasClass(event.data.animateOut)) {
       $(this).removeClass(event.data.animateOut).addClass(event.data.animateIn);
-      $(this).parent().parent().find("#div-to-toggle").show();
+    //   $("#div-to-toggle").not(this).hasClass("show").removeClass("show");
+      $(this).parent().find("#div-to-toggle").addClass('show');
       event.stopPropagation();    
     } else {
       $(this).addClass("animated " + event.data.animateIn);
@@ -24,8 +25,7 @@ $(function () {
 //plugin bootstrap minus and plus
 //http://jsfiddle.net/laelitenetwork/puJ6G/
 $('.btn-number').click(function(e){
-    e.preventDefault();
-    
+    e.preventDefault();    
     fieldName = $(this).attr('data-field');
     type      = $(this).attr('data-type');
     var input = $("input[name='"+fieldName+"']");

@@ -4,6 +4,9 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+html{
+  overflow-x: hidden;
+}
 body {
   background-color: #fffbe7 !important;
   font-family: 'Nunito', sans-serif;
@@ -14,6 +17,9 @@ body {
   margin-top: 10px;
 }
 
+.hero-banner + .content {
+  padding-top: 102px;
+}
 .menu-button {
   background-color: #d1001e;
   padding: 15px;
@@ -59,6 +65,32 @@ body {
   transform: rotate(-45deg) translate(3px, -2px);
   opacity: 1;
 }
+#div-to-toggle{
+  opacity: 0;
+  height: 0px;
+  /* width: 0; */
+  top: 0px;
+   overflow: hidden;
+  transition: 0.5s ease;
+  transition: 0.5s ease;
+  margin-bottom: -50px;
+}
+#div-to-toggle.show{
+  opacity: 1;
+  height: 180px;
+  top: -190px;
+  background-position: right;
+  margin-bottom: 0;
+  width: 70%;
+  transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+.text-field{
+  position: relative;
+  z-index: 99;
+  background-color: #FFECEF;
+  padding: 40px 40px 30px;
+}
 
 .menu {
   position: fixed;
@@ -78,7 +110,6 @@ body {
   overflow: hidden;
   transition: 0.5s ease;
   transition: 0.5s ease;
-
   display: flex;
   justify-content: flex-end;
 }
@@ -212,7 +243,38 @@ body {
   position: fixed; 
   right: 0px;
   z-index: 6;
+  opacity: 1;
+  transition: 0.1s;
 }
+#burger.hide{
+  opacity:0;
+  transition: 2s;
+  
+}
+#bg-burger{
+  opacity: 1;
+  transition: 2s;
+}
+#bg-burger.hide{
+   opacity:0;
+  transition: 2s;
+}
+#burger img:nth-child(4){
+  z-index: 4;
+}
+#burger img:nth-child(3){
+  z-index: 5;
+}
+#burger img:nth-child(2){
+  z-index: 6;
+}
+#burger img:nth-child(1){
+  z-index: 5;
+}
+#burger img{
+  width: 85%;
+}
+
 .card-style h2{
   font-family: 'Shadows Into Light', cursive;
   font-size: 2.25em;
@@ -507,6 +569,11 @@ width: 0;
   overflow: hidden;
   opacity: 1 !important;  
 }
+header .close::before,
+header .close::after
+{
+  background-color: transparent !important;
+}
 .close::before,
 .close::after{
     content: '';
@@ -724,14 +791,16 @@ width: 0;
 }
 .fifth-section .owl-prev{  
    position: absolute;
-   top: 45%;
-   left: 10%;
+   position: absolute;
+    top: -15%;
+    right: 19%;   
 }
 .fifth-section .owl-next{  
    position: absolute;
-   top: 45%;
-   right: 10%;
+  top: -15%;
+  right: 15%;
 }
+
 .carouselItem{
   height: 200px;
 }
@@ -761,7 +830,6 @@ box-shadow: 2px 3px 6px rgba(32, 16, 19, 0.1);
 }
 .cardCont{
   position: relative;
-  padding: 40px 15px 32px;
   box-shadow: 0px 1px 12px rgba(32, 16, 19, 0.1);
 }
 .cardCont .btn-round{
@@ -976,6 +1044,7 @@ box-shadow: 2px 3px 6px rgba(32, 16, 19, 0.1);
 -moz-border-radius-topright: 10px;
 border-top-left-radius: 10px;
 border-top-right-radius: 10px;
+    height: 250px;
 }
 .fifth-section .owl-carousel{
   /* margin-left: -15%; */
@@ -1065,16 +1134,16 @@ footer .copyright a{
 }
 .custom_modal{
   position: absolute;
-  top: -190px;
+  /* top: -190px; */
   background-color: #fffbe7;
   border: 1px solid #C28E95;
   -webkit-border-radius: 15px;
 -moz-border-radius: 15px;
 border-radius: 15px;
-    width: 80%;
-    left: 10%;
+    width: 60%;
+    left: 15%;
     height: 170px;
-    padding: 20px;
+    padding: 30px;
 }
 
 #div-to-toggle {
@@ -1114,4 +1183,213 @@ border-radius: 15px;
   border : 1px solid #A0414F;
   text-align: center;
 }
+.head-mobile{
+  display: none;
+}
+.web-head{
+  display: block;
+}
 
+
+
+
+@media only screen and (max-width : 767px){
+  .fourth-section{
+    height: auto;
+  }
+  .fourth-section .head-mobile{
+     display: block;
+     padding-bottom: 20px;
+  }
+  .burger-making{
+    text-align: center;
+  }
+  .fourth-section .web-head{
+     display: none;
+  }
+  .fourth-section .col-md-10
+   {
+     display: flex;
+     flex-direction: column-reverse;
+     align-items: center;
+     justify-content: center;
+     padding: 0;
+   }
+   .fourth-section .container{
+     height: auto;
+     padding-top: 40px;
+     padding-bottom: 40px;
+   }
+   .fifth-section .owl-prev{
+      right: 24%;
+      top: -16%;
+   }
+   .fifth-section .owl-next{
+     right: 12%;
+     top: -16%;
+   }
+   .fifth-section .heading{
+     font-size: 24px;
+   }
+   footer .container .f-location{
+     display: flex;
+     justify-content: space-between;
+     flex-direction: row;
+   }
+   footer .container .f-location div,
+   footer .copyright .row div
+   {
+     width: auto !important;
+   }
+   footer .copyright .row{
+     display: flex;
+     justify-content: space-between;
+     flex-direction: column-reverse;
+     align-items: center;
+     text-align: center;
+   }
+   footer .copyright{
+     padding: 18px 0px;
+    margin-top: 30px;
+   }
+   footer{
+     padding-top: 40px;
+   }
+   #line1,#line2, #line3, #line4{
+     display: none;
+   }
+   .card-style{
+     padding-bottom: 0px;
+   }
+   #customize{
+     opacity: 0;
+     height: 0;
+     transition: 0.5s ease;
+     transition: 0.5s ease;
+   }
+   #burger{
+     padding-top: 10%;
+     text-align: center;
+   }
+   #customize.show{
+     opacity: 1 ;
+     height: 100px;
+     bottom: 100px;
+     transition: 0.5s ease;
+    transition: 0.5s ease;
+   }
+   .hero-banner h2{
+         padding-bottom: 60%;
+    font-size: 38px;
+    padding-top: 15%;
+   }
+   .hero-banner p{
+      margin-top: 45%;
+      font-size: 15px;
+      text-align: center;
+   }
+   .hero-banner .row{
+     margin: 0 !important;
+   }
+   .hero-banner .down{
+         margin-top: 25px;
+    margin-left: -18px;
+   }
+   .down img{
+     width: 40% !important;
+   }
+   .hero-banner .up{
+         margin-top: -38px;
+    margin-left: -38px;
+   }
+   .fourth-section h3{
+      font-size: 24px;
+      text-align: center;
+   }
+   .owl-carousel{
+     width: 100% !important;
+    margin-left: auto;
+   }
+   .menu-nav.show{
+         width: 80%;
+         margin-top: 30%;
+   }
+   .menu.show{
+      width: 40%;
+      right: 0%;
+      height: 340px;     
+   }
+   .nav-item a{
+     font-size: 15px;
+   }
+   
+ }
+ @media screen and (min-width: 768px) and (max-width: 9914px) {
+    .hero-banner h2{
+      width: 200%;
+    }
+    .hero-banner p{
+      width: 150%;
+      font-size: 28px;
+    }
+    .hero-banner{
+      height: 70vh !important;
+    }
+    .hero-banner .col-md-5{
+      margin-left: 10px;
+    }
+    #burger img{
+      width: 100%;
+    }
+    .hero-img-bg{
+          position: absolute;
+    bottom: 25%;
+    right: 0%;
+    z-index: 1;
+    }
+    .menu.show{
+      right: 1%;
+    width: 50%;
+    }
+    #card01{
+      width: 120% !important;
+      margin-top: 55%;
+    }
+    #card03{
+          width: 120%;
+    margin-top: 55%;
+    text-align: right;
+    }
+    #card02{
+      position: relative;
+    width: 120%;
+    margin-bottom: 30%;
+    }
+    #card04{
+      position: relative;
+    width: 120%;
+    margin-bottom: 30%;
+    }
+    #line1{
+      margin-left: 55%;
+    width: 40%;
+    }
+    #line2{
+      width: 30%;
+    transform: rotate(-34deg);
+    margin-left: 83%;
+    margin-top: 12%;
+    }
+    #line3{
+      margin-left: -25%;
+      width: 60%;
+    }
+    #line4{
+    width: 21%;
+    transform: rotate(-36deg);
+    margin-left: -16%;
+    margin-top: 16%;
+    position: absolute;
+    }
+
+}

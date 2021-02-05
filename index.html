@@ -21,8 +21,8 @@
     <title>Fun Burger</title>
 </head>
 
-<body>
-    <header style="position: sticky;">
+<body >
+    <header style="position: fixed; width: 100%; background-color: #fffbe7; z-index: 9;">
         <div class="header container d-flex justify-content-between align-items-start">
             <div class="Logo">
                 <a href="#">
@@ -74,7 +74,7 @@
         </div>
     </header>
     
-     <section class="hero-banner"  style="height: 100vh;">
+     <section class="hero-banner"  style="height: 98vh; position: relative; padding-top: 2vh;" onscroll="myFunction()">
         <div class="container">
             <div class="row d-flex-inline align-items-center">
                 <div class="col-md-5 offset-md-1">
@@ -87,11 +87,11 @@
                     <p>We all need to make time for <br>a burger, once in a while.</p>
                 </div>
                 <div class="col-md-5 col-sm-6" id="burger">
-                    <img src="assets/images/burger-top.png" class="img-burger" width="80%">                    
-                    <img src="assets/images/burger-spinach.png" class="img-burger" width="80%">                   
-                    <img src="assets/images/burger-tomato.png" class="img-burger" width="80%">
-                    <img src="assets/images/burger-cutlet.png" class="img-burger" width="80%">
-                    <img src="assets/images/burger-base.png" class="img-burger" width="80%">                   
+                    <img src="assets/images/burger-top.png" class="img-burger">                    
+                    <img src="assets/images/burger-spinach.png" class="img-burger">                   
+                    <img src="assets/images/burger-tomato.png" class="img-burger">
+                    <img src="assets/images/burger-cutlet.png" class="img-burger">
+                    <img src="assets/images/burger-base.png" class="img-burger">                   
                 </div>  
                 
             </div>
@@ -164,7 +164,7 @@
                     <h2 data-aos="fade-down" data-aos-offset="50" data-aos-delay="100" >Customize Your Burger</h2>
                     <button class="btn-burger" data-aos="fade-up" data-aos-offset="100" data-aos-delay="100" data-aos-anchor-placement="bottom-bottom">Make Your Own</button>
                 </div>
-                <div class="col-md-12" style="position: fixed; bottom: 0%; right: 10px;">
+                <div class="col-md-12" id="bg-burger" style="position: fixed; bottom: 0%; right: 10px;">
                     <img src="assets/images/background.png" width="70%" class="bg2" id="bg1">
                     <img src="assets/images/background2.svg" width="100%" class="bg2" id="bg2">
                 </div>
@@ -175,9 +175,9 @@
 
     <div class="fourth-section" style="position: relative; z-index: 8;">
         <div class="container">
-            <div class="row col-md-10">
+            <div class="row col-md-10">               
                 <div class="col-md-6">
-                    <h3 data-aos="fade-right">Make Your Own Burger</h3>
+                    <h3 data-aos="fade-right" class="web-head">Make Your Own Burger</h3>
                     <div class="burger-making">
                         <img src="assets/images/burger-top.png" class="img-burger" width="80%">
                         <img src="assets/images/burger-spinach.png" class="img-burger" width="80%">
@@ -187,6 +187,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
+                    <h3 data-aos="fade-right" class="head-mobile">Make Your Own Burger</h3>
                     <div class="b-card" data-aos="zoom-in">
                         <div class="card-head">
                             <span style="width: 60%;">Select Toppings</span>
@@ -291,46 +292,18 @@
             </div>
         <div id="owl-demo" class="owl-carousel">        
             <div class="item">
-               <div class="burger-item">
-                   <div class="burImg">
-                        <img src="assets/images/hamburger_burger.png" width="100%">
-                    </div>
-                   <div class="cardCont">
-                       <div class="btn-round animated plusButton" data-toggle="modal" data-target="#exampleModal">
-                            <span class="close"></span>
-                        </div>
-                       <h3>Hawaii Burger</h3>
-                       <p>Topped with pineapple and often Japanese teriyaki sauce.</p>                    
-                   </div>
-               </div>
-            </div>
-            <div class="item">
                 <div class="burger-item">
                     <div class="burImg">
-                        <img src="assets/images/hamburger_burger.png" width="100%">
+                        <img src="assets/images/01-new.png" width="100%">
                     </div>
                     <div class="cardCont">
-                        <div class="btn-round animated plusButton">
-                            <span class="close"></span>
-                        </div>
-                        <h3>Hawaii Burger</h3>
-                        <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="burger-item">
-                    <div class="burImg">
-                        <img src="assets/images/hamburger_burger.png" width="100%">
-                    </div>
-                    <div class="cardCont">
-
+            
                         <div id="parent1"></div>
-                        
+            
                         <div class="btn-round animated plusButton" id="click-to-show">
                             <span class="close"></span>
                         </div>
-                        <div id="div-to-toggle" class="custom_modal" style="display: none;">
+                        <div id="div-to-toggle" class="custom_modal">
                             <div class="input-group">
                                 <span class="input-group-btn">
                                     <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus"
@@ -350,159 +323,299 @@
                             </div>
                             <button class="basicBtn btn-red" style="width: 100%;">ADD TO CART</button>
                         </div>
-                        <h3>Hariz Hameed</h3>
-                        <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
-
+                        <div class="text-field">
+                            <h3>Pastrami Burger</h3>
+                            <p>Burger with cheese and thin-sliced pastrami on top.</p>
+                        </div>
                         <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="burger-item">
+                    <div class="burImg">
+                        <img src="assets/images/02-new.png" width="100%">
+                    </div>
+                    <div class="cardCont">
+            
+                        <div id="parent1"></div>
+            
+                        <div class="btn-round animated plusButton" id="click-to-show">
+                            <span class="close"></span>
+                        </div>
+                        <div id="div-to-toggle" class="custom_modal">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus"
+                                        data-field="quant[1]">
+                                        <i class="fa fa-minus" aria-hidden="true"></i>
                                     </button>
-                                </div>
-                                <div class="modal-body">
-                                    ...
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
+                                </span>
+                                <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </button>
+                                </span>
                             </div>
+                            <div class="input-group pb-3">
+                                <input type="text" name="total" class="form-control input-number" value="Rs 600">
+                            </div>
+                            <button class="basicBtn btn-red" style="width: 100%;">ADD TO CART</button>
                         </div>
-                    </div>
+                        <div class="text-field">
+                            <h3>Pastrami Burger</h3>
+                            <p>Burger with cheese and thin-sliced pastrami on top.</p>
+                        </div>
+                        <!-- Modal -->
                     </div>
                 </div>
             </div>
             <div class="item">
                 <div class="burger-item">
                     <div class="burImg">
-                        <img src="assets/images/hamburger_burger.png" width="100%">
+                        <img src="assets/images/03-new.png" width="100%">
                     </div>
                     <div class="cardCont">
-                        <div class="btn-round animated plusButton">
+            
+                        <div id="parent1"></div>
+            
+                        <div class="btn-round animated plusButton" id="click-to-show">
                             <span class="close"></span>
                         </div>
-                        <h3>Hawaii Burger</h3>
-                        <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
+                        <div id="div-to-toggle" class="custom_modal">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus"
+                                        data-field="quant[1]">
+                                        <i class="fa fa-minus" aria-hidden="true"></i>
+                                    </button>
+                                </span>
+                                <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="input-group pb-3">
+                                <input type="text" name="total" class="form-control input-number" value="Rs 600">
+                            </div>
+                            <button class="basicBtn btn-red" style="width: 100%;">ADD TO CART</button>
+                        </div>
+                        <div class="text-field">
+                            <h3>Cuban Frita</h3>
+                            <p>Burger topped with roasted New Mexico chiles and Jalapeno.</p>
+                        </div>
+                        <!-- Modal -->
                     </div>
                 </div>
             </div>
+
             <div class="item">
                 <div class="burger-item">
                     <div class="burImg">
-                        <img src="assets/images/hamburger_burger.png" width="100%">
+                        <img src="assets/images/04-new.png" width="100%">
                     </div>
                     <div class="cardCont">
-                        <div class="btn-round animated plusButton">
+            
+                        <div id="parent1"></div>
+            
+                        <div class="btn-round animated plusButton" id="click-to-show">
                             <span class="close"></span>
                         </div>
-                        <h3>Hawaii Burger</h3>
-                        <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
+                        <div id="div-to-toggle" class="custom_modal">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus"
+                                        data-field="quant[1]">
+                                        <i class="fa fa-minus" aria-hidden="true"></i>
+                                    </button>
+                                </span>
+                                <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="input-group pb-3">
+                                <input type="text" name="total" class="form-control input-number" value="Rs 600">
+                            </div>
+                            <button class="basicBtn btn-red" style="width: 100%;">ADD TO CART</button>
+                        </div>
+                        <div class="text-field">
+                            <h3>Cheeseburger</h3>
+                            <p>Hamburger accompanied with melted cheddar cheese.</p>
+                        </div>
+                        <!-- Modal -->
                     </div>
                 </div>
             </div>
+
             <div class="item">
                 <div class="burger-item">
                     <div class="burImg">
-                        <img src="assets/images/hamburger_burger.png" width="100%">
+                        <img src="assets/images/05-new.png" width="100%">
                     </div>
                     <div class="cardCont">
-                        <div class="btn-round animated plusButton">
+            
+                        <div id="parent1"></div>
+            
+                        <div class="btn-round animated plusButton" id="click-to-show">
                             <span class="close"></span>
                         </div>
-                        <h3>Hawaii Burger</h3>
-                        <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
+                        <div id="div-to-toggle" class="custom_modal">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus"
+                                        data-field="quant[1]">
+                                        <i class="fa fa-minus" aria-hidden="true"></i>
+                                    </button>
+                                </span>
+                                <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="input-group pb-3">
+                                <input type="text" name="total" class="form-control input-number" value="Rs 600">
+                            </div>
+                            <button class="basicBtn btn-red" style="width: 100%;">ADD TO CART</button>
+                        </div>
+                        <div class="text-field">
+                            <h3>Hawaii Burger</h3>
+                            <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
+                        </div>
+                        <!-- Modal -->
                     </div>
                 </div>
             </div>
+
             <div class="item">
                 <div class="burger-item">
                     <div class="burImg">
-                        <img src="assets/images/hamburger_burger.png" width="100%">
+                        <img src="assets/images/06-new.png" width="100%">
                     </div>
                     <div class="cardCont">
-                        <div class="btn-round animated plusButton">
+            
+                        <div id="parent1"></div>
+            
+                        <div class="btn-round animated plusButton" id="click-to-show">
                             <span class="close"></span>
                         </div>
-                        <h3>Hawaii Burger</h3>
-                        <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
+                        <div id="div-to-toggle" class="custom_modal">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus"
+                                        data-field="quant[1]">
+                                        <i class="fa fa-minus" aria-hidden="true"></i>
+                                    </button>
+                                </span>
+                                <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="input-group pb-3">
+                                <input type="text" name="total" class="form-control input-number" value="Rs 600">
+                            </div>
+                            <button class="basicBtn btn-red" style="width: 100%;">ADD TO CART</button>
+                        </div>
+                        <div class="text-field">
+                            <h3>Salmon Burger</h3>
+                            <p>Fishcake made mostly from salmon in the style of a hamburger.</p>
+                        </div>
+                        <!-- Modal -->
                     </div>
                 </div>
             </div>
+
             <div class="item">
                 <div class="burger-item">
                     <div class="burImg">
-                        <img src="assets/images/hamburger_burger.png" width="100%">
+                        <img src="assets/images/07-new.png" width="100%">
                     </div>
                     <div class="cardCont">
-                        <div class="btn-round animated plusButton">
+            
+                        <div id="parent1"></div>
+            
+                        <div class="btn-round animated plusButton" id="click-to-show">
                             <span class="close"></span>
                         </div>
-                        <h3>Hawaii Burger</h3>
-                        <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
+                        <div id="div-to-toggle" class="custom_modal">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus"
+                                        data-field="quant[1]">
+                                        <i class="fa fa-minus" aria-hidden="true"></i>
+                                    </button>
+                                </span>
+                                <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="input-group pb-3">
+                                <input type="text" name="total" class="form-control input-number" value="Rs 600">
+                            </div>
+                            <button class="basicBtn btn-red" style="width: 100%;">ADD TO CART</button>
+                        </div>
+                        <div class="text-field">
+                            <h3>Cuban Frita</h3>
+                            <p>Burger topped with roasted New Mexico chiles and Jalapeno.</p>
+                        </div>
+                        <!-- Modal -->
                     </div>
                 </div>
             </div>
+
             <div class="item">
                 <div class="burger-item">
                     <div class="burImg">
-                        <img src="assets/images/hamburger_burger.png" width="100%">
+                        <img src="assets/images/08-new.png" width="100%">
                     </div>
                     <div class="cardCont">
-                        <div class="btn-round animated plusButton">
+            
+                        <div id="parent1"></div>
+            
+                        <div class="btn-round animated plusButton" id="click-to-show">
                             <span class="close"></span>
                         </div>
-                        <h3>Hawaii Burger</h3>
-                        <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="burger-item">
-                    <div class="burImg">
-                        <img src="assets/images/hamburger_burger.png" width="100%">
-                    </div>
-                    <div class="cardCont">
-                        <div class="btn-round animated plusButton">
-                            <span class="close"></span>
+                        <div id="div-to-toggle" class="custom_modal">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus"
+                                        data-field="quant[1]">
+                                        <i class="fa fa-minus" aria-hidden="true"></i>
+                                    </button>
+                                </span>
+                                <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="input-group pb-3">
+                                <input type="text" name="total" class="form-control input-number" value="Rs 600">
+                            </div>
+                            <button class="basicBtn btn-red" style="width: 100%;">ADD TO CART</button>
                         </div>
-                        <h3>Hawaii Burger</h3>
-                        <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="burger-item">
-                    <div class="burImg">
-                        <img src="assets/images/hamburger_burger.png" width="100%">
-                    </div>
-                    <div class="cardCont">
-                        <div class="btn-round animated plusButton">
-                            <span class="close"></span>
+                        <div class="text-field">
+                            <h3>Pastrami Burger</h3>
+                            <p>Burger with cheese and thin-sliced pastrami on top.</p>
                         </div>
-                        <h3>Hawaii Burger</h3>
-                        <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
+                        <!-- Modal -->
                     </div>
                 </div>
-            </div>
-            <div class="item">
-                <div class="burger-item">
-                    <div class="burImg">
-                        <img src="assets/images/hamburger_burger.png" width="100%">
-                    </div>
-                    <div class="cardCont">
-                        <div class="btn-round animated plusButton">
-                            <span class="close"></span>
-                        </div>
-                        <h3>Hawaii Burger</h3>
-                        <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
-                    </div>
-                </div>
-            </div>        
+            </div>                
         </div>
         </div>
     </div>
@@ -612,7 +725,23 @@
                 navigation: true,
                 autoPlay: true,
                 responsive: true,
-                items: 5,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: true
+                    },
+                    600: {
+                        items: 1,
+                        nav: false
+                    },
+                    1000: {
+                        items: 5,
+                        nav: true,
+                        loop: false
+                    }
+                },
+               
                 slideSpeed: 200,
                 pagination:false,
                 goToFirst :false,
@@ -623,6 +752,11 @@
             })
         });
     </script>
+
+  
+
+
+
 
 </body>
 
