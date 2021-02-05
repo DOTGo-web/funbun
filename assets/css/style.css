@@ -1268,7 +1268,7 @@ border-radius: 15px;
      transition: 0.5s ease;
    }
    #burger{
-     padding-top: 10%;
+     /* padding-top: 10%; */
      text-align: center;
    }
    #customize.show{
@@ -1322,6 +1322,15 @@ border-radius: 15px;
    .nav-item a{
      font-size: 15px;
    }
+   #burger img{
+     filter: grayscale(0%);
+   }
+   #burger img.filter{
+     filter: grayscale(30%);
+   }
+    #burger{
+      background-color: rgb(255, 251, 231);
+    }
    
  }
  @media screen and (min-width: 768px) and (max-width: 9914px) {
@@ -1338,6 +1347,7 @@ border-radius: 15px;
     .hero-banner .col-md-5{
       margin-left: 10px;
     }
+   
     #burger img{
       width: 100%;
     }

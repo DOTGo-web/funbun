@@ -9,6 +9,7 @@ $(document).ready(function () {
   const b3 = $("#burger img:nth-child(3)");
   const b4 = $("#burger img:nth-child(4)");
   const b5 = $("#burger img:nth-child(5)");  
+   const bimg = $("#burger img");
   b4.css({ "margin-bottom": "-7%"});
   b3.css({ "margin-bottom": "-5%"});
   b2.css({"margin-bottom": "-10%"});
@@ -36,8 +37,7 @@ $(document).ready(function () {
        } else {
          b.css({ background: "transparent" });
        }
-
-
+       
        if (height > 360 && height <= 380) {
          $("#customize").addClass('show');
        } else{
