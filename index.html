@@ -326,12 +326,29 @@
                     <div class="cardCont">
 
                         <div id="parent1"></div>
-                        <div id="div-to-toggle" class="custom_modal" style="display: none;">                        
-                            <h1>This is heading</h1>
-                            <p>This a Paragraph in the div for demonstration.</p>
-                        </div>
+                        
                         <div class="btn-round animated plusButton" id="click-to-show">
                             <span class="close"></span>
+                        </div>
+                        <div id="div-to-toggle" class="custom_modal" style="display: none;">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus"
+                                        data-field="quant[1]">
+                                        <i class="fa fa-minus" aria-hidden="true"></i>
+                                    </button>
+                                </span>
+                                <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="input-group pb-3">
+                                <input type="text" name="total" class="form-control input-number" value="Rs 600">
+                            </div>
+                            <button class="basicBtn btn-red" style="width: 100%;">ADD TO CART</button>
                         </div>
                         <h3>Hariz Hameed</h3>
                         <p>Topped with pineapple and often Japanese teriyaki sauce.</p>
